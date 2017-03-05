@@ -3,5 +3,8 @@
 <% @blogs.each do |blog| %>
   <p><%= blog.title %> -- <%= blog.body %></p>
 <% end %>
+<% @skills.each do |skill| %>
+  <p><%= skill.title %> -- <%= skill.percent_utilized %></p>
+<% end %>
 
 <%= @blogs.inspect %>
