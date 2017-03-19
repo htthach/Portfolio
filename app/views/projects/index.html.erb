@@ -1,0 +1,8 @@
+<h1>Project Items</h1>
+
+<% @project_items.each do |project_item| %>
+  <p><%= project_item.title %></p>
+  <p><%= project_item.subtitle %></p>
+  <p><%= project_item.body %></p>
+  <%= image_tag project_item.thumb_image %>
+<% end %>
