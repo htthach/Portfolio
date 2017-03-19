@@ -7,7 +7,7 @@ class ProjectsController < ApplicationController
     @project_item = Project.new
   end
 
-   def create
+  def create
     @project_item = Project.new(params.require(:project).permit(:title, :subtitle, :body))
 
     respond_to do |format|
@@ -19,4 +19,20 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def edit
+    @project_item = Project.find(params[:id])
+
+  end
+
+  def update
+    @project_item = Project.find(params[:id])
+    
+    respond_to do |format|
+      if @project_item.update(params.require(:project).permit(:title, :subtitle, :body))
+        format.html { redirect_to projects_path, notice: 'Project was successfully updated.' }
+      else
+        format.html { render :edit }
+      end
+    end
+  end
 end
