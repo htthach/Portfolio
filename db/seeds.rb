@@ -43,3 +43,12 @@ end
 end
 
 puts "9 porfolio items created"
+
+3.times do |technology|
+  #alter native way of create for child in project
+  Project.last.technologies.create!(
+    name: "Technology #{technology}"
+  )
+end
+
+puts "3 technologies created"
