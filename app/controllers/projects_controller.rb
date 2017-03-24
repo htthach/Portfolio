@@ -3,6 +3,10 @@ class ProjectsController < ApplicationController
     @project_items = Project.all
   end
 
+  def ios
+    @ios_project_items = Project.ios
+  end
+
   def new
     @project_item = Project.new
   end
