@@ -1,6 +1,12 @@
 <%= image_tag @project_item.main_image %>
 <h1><%= @project_item.title %></h1>
+
 <em><%= @project_item.subtitle %></em>
 
 <p><%= @project_item.body %></p>
 
+<h2>Technologies Used: </h2>
+
+<% @project_item.technologies.each do |t| %>
+<p><%= t.name %></p>
+<% end %>

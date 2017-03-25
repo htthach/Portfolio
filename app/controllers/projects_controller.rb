@@ -3,12 +3,17 @@ class ProjectsController < ApplicationController
     @project_items = Project.all
   end
 
+  def ios
+    @ios_project_items = Project.ios
+  end
+
   def new
     @project_item = Project.new
+    3.times { @project_item.technologies.build }
   end
 
   def create
-    @project_item = Project.new(params.require(:project).permit(:title, :subtitle, :body))
+    @project_item = Project.new(params.require(:project).permit(:title, :subtitle, :body, technologies_attributes:[:name]))
 
     respond_to do |format|
       if @project_item.save
