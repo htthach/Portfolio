@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/htthach/thach_view_tool
+  revision: e79807abd07eaabb0432c0e0618da1119b56ff7a
+  specs:
+    thach_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -197,6 +203,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  thach_view_tool!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)

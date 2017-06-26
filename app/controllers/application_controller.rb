@@ -5,4 +5,9 @@ class ApplicationController < ActionController::Base
   include CurrentUserConcern
   include DefaultPageContent
   
+  before_action :set_copyright
+
+  def set_copyright
+    @copyright = ThachViewTool::Renderer.copyright 'Hinh Tinh Thach', 'All rights reserved'
+  end
 end
