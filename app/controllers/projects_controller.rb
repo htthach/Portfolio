@@ -1,6 +1,8 @@
 class ProjectsController < ApplicationController
   before_action :set_project_item, only: [:edit, :show, :update, :destroy]
   layout 'project'
+  access all: [:show, :index, :ios], user: {except: [:destroy, :new, :create, :update, :edit]}, site_admin: :all
+
   def index
     @project_items = Project.all
   end
@@ -41,7 +43,7 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    binding.pry
+    
   end
 
   def destroy
