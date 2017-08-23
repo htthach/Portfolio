@@ -60,3 +60,5 @@ gem 'devise'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
 gem 'thach_view_tool', git: 'https://github.com/htthach/thach_view_tool'
+
+gem 'petergate', '~> 1.7', '>= 1.7.5'
